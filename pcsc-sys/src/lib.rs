@@ -429,4 +429,9 @@ extern "system" {
         cbRecvLength: DWORD,
         lpBytesReturned: *mut DWORD,
     ) -> LONG;
+
+    pub fn SCardFreeMemory(
+        hContext: SCARDCONTEXT,
+        pvMem: *mut u8, 
+    ) -> LONG;
 }
